@@ -11,4 +11,9 @@ public class MyTestController {
 		System.out.println("I am running here babe");
 	}
 
+	@RequestMapping("/hello")
+	public String hello() {
+		System.out.println("Hello from test app");
+		return "hello from test app";
+	}
 }
