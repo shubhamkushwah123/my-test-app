@@ -17,7 +17,11 @@ node{
     }
     
     stage("push Docker image"){
-        sh 'docker push shubhamkushwah123/my-test-app:1.0.0'
+    withCredentials([string(credentialsId: 'dockerPwd', variable: 'dockerHubPwd')]) {
+       sh "docker login -u shubhamkushwah123 -p ${dockerHubPwd}"
+     }
+     sh 'docker push shubhamkushwah123/my-test-app:1.0.0'
+     
     }
     
     stage("run on aws server"){
