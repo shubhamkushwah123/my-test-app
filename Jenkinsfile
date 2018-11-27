@@ -29,7 +29,7 @@ node{
         def dockerRun = 'docker run -p 80:8888 -d --name my-test-app shubhamkushwah123/my-test-app:1.0.0'
         
         sshagent(['dev-server']) {
-   		 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.25.100 ${dockerRun}"
+   		 sh "ssh -o StrictHostKeyChecking=no ec2-user@54.194.201.8 ${dockerRun}"
 		}
     }
 }
