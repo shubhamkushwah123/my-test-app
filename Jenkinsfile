@@ -26,7 +26,7 @@ node{
     
     stage("run on aws server"){
     
-        def dockerRun = 'docker run -p 80:8888 -d --name my-test-app shubhamkushwah123/my-test-app:1.0.0'
+        def dockerRun = 'docker run -p 8888:8888 -d --name my-test-app shubhamkushwah123/my-test-app:1.0.0'
         
         sshagent(['dev-server']) {
    		 sh "ssh -o StrictHostKeyChecking=no ec2-user@54.194.201.8 ${dockerRun}"
