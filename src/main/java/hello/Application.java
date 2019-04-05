@@ -18,6 +18,7 @@ public class Application {
     public String home() {
 		log.info("Default / endpoint is called");
 		log.debug("it returns hello from Docker World");
+		System.out.println("hello");
         return "Hello Docker World";
     }
 	
