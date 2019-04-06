@@ -6,13 +6,18 @@ phases:
 
       commands:
 
-        - echo ### install docker
+        - echo install docker
         
 
-      pre-build :
+      pre_build :
         commands:
-        - echo I am in pre-build phase
+           - echo I am in pre-build phase
 
       build:
-        - echo I am in build phase
+        commands:
+           - echo I am in build phase
+        
+      post_build:
+         commands:
+           - echo I am in post build phase 
         
