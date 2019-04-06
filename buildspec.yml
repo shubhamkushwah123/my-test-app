@@ -1,0 +1,18 @@
+version: 0.1
+
+phases:
+
+  install:
+
+      commands:
+
+        - echo ### install docker
+        
+
+      pre-build :
+        commands:
+        - echo I am in pre-build phase
+
+      build:
+        - echo I am in build phase
+        
