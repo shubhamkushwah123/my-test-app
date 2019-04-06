@@ -5,17 +5,12 @@ phases:
   install:
 
       commands:
-
-        - echo install docker
-        
-
-      pre_build :
-        commands:
-           - echo I am in pre-build phase
+        - mvn clean install 
+        - echo I am in install phase
 
       build:
         commands:
-           - echo I am in build phase
+           - echo 'I am in build phase'
         
       post_build:
          commands:
