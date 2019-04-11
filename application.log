@@ -28,3 +28,5 @@
 2019-04-11 22:28:44.110  INFO 832 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2019-04-11 22:28:44.126  INFO 832 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
 2019-04-11 22:28:44.158  INFO 832 --- [http-nio-8888-exec-1] hello.Application                        : Default / endpoint is called
+2019-04-11 22:51:14.749  INFO 832 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@55a561cf: startup date [Thu Apr 11 22:28:00 IST 2019]; root of context hierarchy
+2019-04-11 22:51:14.751  INFO 832 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

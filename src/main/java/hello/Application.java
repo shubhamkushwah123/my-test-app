@@ -22,8 +22,9 @@ public class Application {
 		log.info("Default / endpoint is called");
 		log.debug("it returns hello from Docker World");
 		System.out.println("hello");
-		String address = InetAddress.getLocalHost().toString();
-        return "Hello Docker World" + address;
+		InetAddress machine = InetAddress.getLocalHost();
+		String localhost = machine.getHostName();
+        return "I am " + localhost;
     }
 	
 	
