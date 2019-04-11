@@ -20,7 +20,7 @@ public class MyTestController {
 	@RequestMapping("/hello")
 	public String hello() {
 		//System.out.println("Hello from test app");
-		log.info("hello from test app");
-		return "hello from test app";
+		log.info("hello from test app1");
+		return "hello from test app1";
 	}
 }

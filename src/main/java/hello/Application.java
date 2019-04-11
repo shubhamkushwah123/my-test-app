@@ -1,5 +1,8 @@
 package hello;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -15,11 +18,12 @@ public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 	
 	@RequestMapping("/")
-    public String home() {
+    public String home() throws Exception {
 		log.info("Default / endpoint is called");
 		log.debug("it returns hello from Docker World");
 		System.out.println("hello");
-        return "Hello Docker World";
+		String address = InetAddress.getLocalHost().toString();
+        return "Hello Docker World" + address;
     }
 	
 	
