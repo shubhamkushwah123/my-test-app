@@ -24,7 +24,8 @@ public class Application {
 		System.out.println("hello");
 		InetAddress machine = InetAddress.getLocalHost();
 		String localhost = machine.getHostName();
-        return "I am " + localhost;
+		System.out.println(machine);
+        return "hello from " + machine;
     }
 	
 	
