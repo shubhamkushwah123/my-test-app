@@ -4,9 +4,9 @@ node{
     }
     
     stage("maven build"){
-       def mvnHome = tool name: 'MAVEN-3', type: 'maven'
-       def mvnCMD = "$(mvnHome)/bin/mvn"    
-        sh "$(mvnCMD) clean package"
+       tool name: 'MAVEN-3', type: 'maven'
+       //def mvnCMD = "$(mvnHome)/bin/mvn"    
+        sh "mvn clean package"
     }
     
     stage("Sonarqube scan"){
