@@ -4,13 +4,18 @@ node{
     }
     
     stage("maven build"){
-        tool name: 'MAVEN-3', type: 'maven'
-        sh 'mvn clean package'
+       def mvnHome = tool name: 'MAVEN-3', type: 'maven'
+       def mvnCMD = "$(mvnHome)/bin/mvn"    
+        sh "$(mvnCMD) clean package"
     }
     
     stage("Sonarqube scan"){
        sh 'mvn sonar:sonar'
     }
+   
+	
+    stage("mvn package")
+	
     
     stage("docker build image"){
         sh 'docker build -t shubhamkushwah123/my-test-app:1.0.0 .'
